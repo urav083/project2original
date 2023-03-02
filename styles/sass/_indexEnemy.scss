@@ -1,0 +1,86 @@
+.testWrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/j867_5bkq_180808.jpg);
+    background-size: cover;
+}
+
+.box3 {
+    height: 95%;
+    width: 95%;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    margin: 0;
+    .enemyImage {
+        height: 40%;
+        opacity: 1.0;
+        animation: bounce 1s ease-in-out infinite;
+        .enemyPic {
+            height: 100%;
+            opacity: 1.0;
+        }
+    }
+    h2 {
+        margin-top: 2%;
+        text-transform: uppercase;
+        line-height: 150%;
+        span {
+            font-weight: bold;
+            color: red;
+        }
+    }
+    p {
+        font-size: 16px;
+        line-height: 200%;
+    }
+    a {
+        margin: 5%;
+        text-decoration: none;
+        color: white;
+        font-family: 'Press Start 2P', cursive;
+    }
+}
+
+.continueButton {
+    background-color: skyblue;
+    color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    font-size: 20px;
+    box-shadow: 1px 1px #403f3f;
+    width: 240px;
+    height: 60px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-family: 'Press Start 2P', cursive;
+    ;
+    text-transform: uppercase;
+}
+
+.continueButton:hover {
+    background-color: yellow;
+    translate: 1px 1px;
+}
+
+
+/* Define the animation */
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,348 @@
+.indexBattleScreen {
+    width: 100vw;
+    display: none;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 90, 20, 0.8), rgba(0, 255, 0, 0.6), rgba(0, 255, 0, 0.6), rgba(0, 90, 20, 0.8)), url("../assets/Capture.PNG");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box5 {
+    z-index: 5000;
+}
+
+.wrap {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.opponent,
+.player {
+    height: 50%;
+    width: 100vw;
+}
+
+.opponent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.player {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.gary,
+.ash,
+.healthBarOpponent,
+.healthBarPlayer {
+    width: 50%;
+    height: 100%;
+}
+
+.gary {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+}
+
+.ash {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.healthBarOpponent,
+.healthBarPlayer {
+    height: 400px;
+}
+
+.healthBarPlayer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    #menu {
+        position: absolute;
+        height: 400px;
+        width: 900px;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        display: none;
+        border-radius: 5px;
+        padding: 10px;
+        line-height: 16px;
+        background: rgb(177, 177, 177);
+        border: 4px solid white;
+        box-shadow: 0 2px 0 2px black, inset 0 2px 0 2px black, 0 0 0 2px black, inset 0 0 0 2px black;
+        .fire {
+            height: 100%;
+            width: 34%;
+            background: rgb(177,177,177);
+
+            p {
+                margin-top: 0;
+            }
+            img {
+                height: 300px;
+                width: 100%;
+            }
+        }
+        .water {
+            height: 100%;
+            width: 33%;
+            background: rgb(177,177,177);
+
+            p {
+                margin-top: 0;
+            }
+            
+            img {
+                height: 300px;
+                width: 100%;
+            }
+        }
+        .grass {
+            height: 100%;
+            width: 33%;
+            background: rgb(177,177,177);
+            p {
+                margin-top: 0;
+            }
+            img {
+                height: 300px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.green {
+    background-color: green;
+    height: 20px;
+    width: 600px;
+    border: solid black 3px;
+    border-radius: 25px;
+}
+
+.menuButton {
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 10px;
+    height: 200px;
+    width: 600px;
+    border-radius: 5px;
+    padding: 10px;
+    line-height: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 4px solid white;
+    box-shadow: 0 2px 0 2px black, inset 0 2px 0 2px black, 0 0 0 2px black, inset 0 0 0 2px black;
+}
+
+.menuButton:hover,
+.menuButton:focus {
+    background: rgba(177, 177, 177, 0.8);
+}
+
+.ashImg,
+.garyImg {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    z-index: 2;
+}
+
+.garyImg {
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    display: none;
+    #fightButton {
+        z-index: 1;
+        margin-bottom: -70px;
+    }
+}
+
+.playerType {
+    display: none;
+}
+
+.gary{
+    .grassField1{
+        height: 300px;
+        width: 600px;
+        z-index: 1;
+    }
+}
+
+.ash{
+    .grassField2 {
+        height: 500px;
+        width: 500px;
+        z-index: 1;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 1400px) {
+
+    .healthBarPlayer{
+        #menu{
+            height: 400px;
+            width: 600px;
+        }
+    }
+    .green{
+        width: 400px;
+    }
+    .ashImg,
+    .garyImg {
+        height: 300px;
+        width: 300px;
+    }
+
+    .grassField1{
+        width: 500px
+    } 
+    .grassField2{
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 1110px) {
+    .menuButton{
+        width: 400px;
+    }
+
+    .healthBarPlayer {
+            #menu {
+                height: 300px;
+                width: 500px;
+
+                .fire, .water, .grass{
+                    img {
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    
+        .green {
+            width: 400px;
+        }
+    
+        .ashImg,
+        .garyImg {
+            height: 300px;
+            width: 300px;
+        }
+    
+        .gary{
+            .grassField1 {
+                width: 400px
+            }
+        }
+    
+        .ash{
+            .grassField2 {
+                height: 400px;
+                width: 400px;
+            }
+        }
+}
+
+@media (max-width: 1000px) {
+
+    .healthBarPlayer {
+        #menu {
+            height: 300px;
+            width: 500px;
+
+            .fire,
+            .water,
+            .grass {
+                img {
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+
+    .ashImg,
+    .garyImg {
+        height: 300px;
+        width: 300px;
+    }
+
+    .green {
+        width: 300px;
+    }
+
+    .gary {
+        .grassField1 {
+            width: 400px
+        }
+    }
+    
+    .ash {
+        .grassField2 {
+            height: 400px;
+            width: 400px;
+        }
+    }
+}
+
+@media (max-width: 940px) {
+        
+
+    .ashImg,
+    .garyImg {
+        height: 200px;
+        width: 200x;
+    }
+
+    .green {
+        width: 300px;
+    }
+
+    .gary {
+        .grassField1 {
+            width: 300px
+        }
+    }
+
+    .ash {
+        .grassField2 {
+            height: 300px;
+            width: 300px;
+        }
+    }
+
+}
+
+@media (max-width: 840px) {
+    
+}
+
+@media (max-width: 680px) {
+ 
+}

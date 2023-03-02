@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <title>Pokemon Battle</title>
+</head>
+
+<body>
+    <header>
+        <div class="testWrapper">
+            <div class="box box3">
+                <div class="logo">
+                    <img src="./assets/pngegg.png" alt="pokemon logo">
+                </div>
+
+                <h2>Your opponent's pokemon is...</h2>
+
+                <div class="enemyImage">
+                    <img class="enemyPic" src="" alt="">
+                </div><!--end of enemyImage-->
+
+                <h2>type: <span class="enemyType"></span> name: <span class="enemyName"></span></h2>
+
+                <button class="continueButton" id="continueToFight">CONTINUE</button>
+            </div><!--end of box, box3-->
+        </div><!--end of text wrapper-->
+
+        <div class="battleWrapper">
+            <div class="box box4">
+                <div class="enemyImage">
+                    <img class="enemyPic " src="" alt="">
+                </div><!--end of box, box4-->
+
+                <h2>VS</h2>
+
+                <div class="enemyImage">
+                    <img class="enemyPic" src="" alt="">
+                </div><!--end of enemy Image-->
+            </div><!--end of box, box4-->
+        </div><!--end of battle wrapper-->
+    </header>
+        
+    <main>        
+        <div class="indexBattleScreen">
+            <div class="wrap">
+                <div class="opponent">
+                    <div class="healthBarOpponent">
+                        <h2 class="GaryName">Gary</h2>
+                        <div class="green"></div>
+                    </div><!--end of health bar opponent-->
+
+                    <div class="button">
+                        <input type="image" src="./assets/fight.png" alt="Fight Button" height="150" width="250" id="fightButton">
+                    </div><!--end of button-->
+
+                    <div class="gary">
+                        <img class="garyImg" src="./assets/gary.png" alt="Opponent Sprite, named Gary">
+                        <img src="./assets/garybattle.png" alt="image of battle grass where pokemon sprites go on top of" class="grassField1">
+                    </div><!--end of gary img-->
+                </div><!--end of opponent-->
+
+                <div class="player">
+                    <div class="ash">
+                        <img class="ashImg" src="./assets/ash.png" alt="Player Sprite, named Ash">
+                        <span class="playerType"></span>
+                        <img src="./assets/ashbattle.png" alt="image of battle grass where pokemon sprites go on top of" class="grassField2">
+                    </div><!--end of ash image-->
+
+                    <div class="healthBarPlayer">
+                        <h2 class="ashName">Ash</h2>
+
+                        <div class="green"></div>
+
+                        <button class="menuButton" onclick="pokemon.hideFunction()">Choose Your Pokemon</button>
+
+                        <div id="menu">
+
+                            <div class="fire"></div>
+                            <div class="water"></div>
+                            <div class="grass"></div>
+
+                        </div><!--end of menu-->
+                    </div><!--end of player health bar-->
+                </div><!--end of player-->
+            </div><!--end of div wrap-->
+
+            <div class="box box5">
+                <h2 class="finalOutcome"></h2>
+            </div> <!--end of box, box5-->
+        </div><!--end of indexBattleScreen wrapper-->
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

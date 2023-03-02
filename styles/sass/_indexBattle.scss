@@ -1,0 +1,31 @@
+header {
+    z-index: 1000;
+    position: absolute;
+}
+
+.battleWrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/j867_5bkq_180808.jpg);
+    background-size: cover;
+    display: none;
+}
+
+.box4 {
+    height: 95%;
+    width: 95%;
+    z-index: 5;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    margin: 0;
+    h2 {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}

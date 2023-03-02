@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Start Page</title>
+</head>
+
+<body>
+    <main>
+        <div class="bg-image">
+            <div class="logo">
+                <img src="./assets/pngegg.png" alt="pokemon logo">
+            </div>
+            <!--end of logo-->
+
+            <div class="box box2">
+                <h2>welcome</h2>
+
+                <p>Greetings, Pokemon trainer! Are you ready for your battle? On the next page your opponent's randomly chosen pokemon will present itself. Your job is to select the best pokemon from your team of three to counter the enemy pokemon's type.
+                    Good luck!!!</p>
+
+                <button class="continueButton"><a href="./battlePage.html">continue</a></button>
+                <!-- <p>Created at</p> -->
+                <a class="juno" href="https://junocollege.com/">Created at Juno College</a>
+            </div>
+            <!--end of box, box2-->
+
+            <div class="bird">
+                <img src="./assets/18f0be3c7042350e1f2203bbf48a2507c95bf05cr1-500-278_hq.gif" alt="bird animation">
+            </div>
+            <!--end of bird-->
+
+            <img class="cloudOne" src="./assets/clouds-paper-cut-clipart-with-transparent-background-for-decoration-of-art-file-free-png.png" alt="clouds">
+            <img class="cloudTwo" src="./assets/clouds-paper-cut-clipart-with-transparent-background-for-decoration-of-art-file-free-png.png" alt="clouds">
+
+        </div>
+        <!--end of bg-image-->
+    </main>
+    <!--end of main-->
+
+    <script>
+        // Function to have the rulebox pop up on the start page
+        const ruleDisplayer = function() {
+            const starterDiv = document.querySelector(".bg-image");
+            const ruleBox = document.querySelector(".box2");
+
+            starterDiv.addEventListener('click', () => {
+                ruleBox.style.display = 'flex';
+                ruleBox.classList.add("boxAppear");
+            });
+        }
+
+        ruleDisplayer();
+    </script>
+</body>
+
+</html>
